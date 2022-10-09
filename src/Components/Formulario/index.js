@@ -24,8 +24,6 @@ const Formulario = (props) => {
         setExercicio('')
         setRepeticoes('')
         setCargas('')
-
-        console.log(treino, exercicio, repeticoes, cargas)
     }
 
     return (
