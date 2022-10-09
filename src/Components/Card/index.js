@@ -8,7 +8,7 @@ const Card = (props) => {
             <section className="card">
                 <h2>Treino de {props.nomeDoTreino}</h2>
                 <div className="card-header">
-                    <h3>Exercicios</h3>
+                    <h3>Exercícios</h3>
                     <h3>Repetições</h3>
                     <h3>Cargas</h3>
                 </div>
