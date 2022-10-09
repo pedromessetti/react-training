@@ -1,0 +1,31 @@
+.campo-texto {
+    margin: 1.5em 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1em;
+}
+
+input {
+    background-color: #556c91;
+    color: #61dafb;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+    width: 100%;
+    border: none;
+    font-size: 1em;
+    padding: .5em;
+    box-sizing: border-box;
+}
+
+input::placeholder {
+    background-color: transparent;
+    color: #61dafb;
+}
+
+@media screen and (max-width:920px) {
+    .campo-texto {
+        margin: .5em 0;
+    }
+}

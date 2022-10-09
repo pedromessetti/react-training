@@ -1,0 +1,11 @@
+select {
+    font-size: 1em;
+    color: #61dafb;
+    background-color: #556c91;
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.06);
+    width: 100%;
+    border: none;
+    padding: .5em;
+    box-sizing: border-box;
+}
+
