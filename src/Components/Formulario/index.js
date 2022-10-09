@@ -40,7 +40,7 @@ const Formulario = (props) => {
                 <CampoTexto 
                     obrigatorio={true} 
                     label="Nome do exercício"
-                    placeholder="Ex: Supino Reto HBC"
+                    placeholder="Ex: Supino Reto"
                     valor={exercicio}
                     aoAlterado={valor => setExercicio(valor)}
                 />
