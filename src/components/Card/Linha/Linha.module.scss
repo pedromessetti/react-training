@@ -1,0 +1,14 @@
+.exercicio {
+    display: grid;
+    grid-template-columns: .1fr 1fr 1fr 1fr 1fr;
+    text-align: center;
+    align-items: center;
+
+    p {
+        margin: .3em 0;
+    }
+
+    svg {
+        cursor: pointer;
+    }
+}

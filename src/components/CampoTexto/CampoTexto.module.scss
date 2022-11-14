@@ -1,0 +1,49 @@
+.campoTexto {
+    margin: .8em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    .label {
+        font-size: 1.2em;
+        margin-right: 1.2em;
+
+        &__tempo {
+            margin-right: 3em;
+        }
+    
+        &__numero {
+            width: 70%;
+        }
+    }
+
+    .input {
+        background-color: #556c91;
+        color: #61dafb;
+        box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+        border: none;
+        border-radius: 10px;
+        font-size: 1em;
+        padding: .5em;
+        box-sizing: border-box;
+        
+        &__numero {
+            width: 20%;            
+        }
+        
+        &__texto {
+            width: 100%;            
+        }
+    }
+    
+    .input::placeholder {
+        background-color: transparent;
+        color: #61dafba2;
+    }
+    
+    @media screen and (max-width:920px) {
+        .campo-texto {
+            margin: .5em 0;
+        }
+    }
+}

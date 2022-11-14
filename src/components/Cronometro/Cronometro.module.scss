@@ -1,0 +1,10 @@
+.cronometro {
+    display: flex;
+    justify-content: center;
+
+    svg {
+        font-size: 1.2em;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+}

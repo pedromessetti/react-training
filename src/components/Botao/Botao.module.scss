@@ -1,0 +1,22 @@
+.botao {
+  background-color: #6278f7;
+  border-radius: .75em;
+  font-weight: 700;
+  padding: .7em;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  transition: 500ms;
+  font-size: 1em;
+  font-family: 'Ubuntu';
+
+  &:hover {
+    color: #95ffd4;
+  }
+
+  @media screen and (max-width:920px) {
+    .botao {
+      font-size: .7em;
+    }
+  }
+}
