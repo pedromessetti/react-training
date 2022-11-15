@@ -12,6 +12,10 @@ import { tempoParaSegundos } from "common/utils/time"
 
 //Importação do ícone de Play do pacote React Icons
 import { BsFillPlayFill } from 'react-icons/bs'
+import { AiOutlineCheck } from 'react-icons/ai'
+
+
+//Importação da biblioteca Classnames
 import classNames from 'classnames'
 
 
@@ -22,6 +26,7 @@ export default function Cronometro({ series, tempo }: ILinha) {
     const [cronometro, setCronometro] = useState(tempoParaSegundos(String(tempo)))
     //Cria a variável repetir com o valor inicial da prop series convertida para um tipo number
     const [repetir, setRepetir] = useState(Number(series))
+    //Variável que define se o ícone de play está ativo, estado inicial é false (desativado)
     const [playAtivo, setPlayAtivo] = useState(false)
 
     //Variável que define os minutos através de operações matemáticas
@@ -69,8 +74,10 @@ export default function Cronometro({ series, tempo }: ILinha) {
                 />
         </div>
         :
-        <div>
-            Exercício Finalizado
+        <div className={style.finalizado}>
+            Exercício Concluído
+
+            <AiOutlineCheck />
         </div>
     )
 }
