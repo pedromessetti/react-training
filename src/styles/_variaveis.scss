@@ -1,3 +1,20 @@
+//Arquivo que contém inúmeras variáveis utilizadas na aplicação, pode ser chamado a qualquer momento utilizando o @import
 
-$azul-principal: rgba(76, 103, 147, 0.8);
-$azul-fonte: #61dafb
+//Fonte
+$fonte: 'Ubuntu';
+
+//Cores
+$azul-principal: #4c6793cc;
+$azul-fonte: #61dafb;
+$botao: #6278f7;
+$botao-hover: #95ffd4;
+$branco: #ffffff;
+$placeholder: #61dafba2;
+$azul-input: #556c91;
+$azul-icone: #b1eeff82;
+$remover: #fb6161;
+
+//Sombras
+$sombra: .3em .3em .8em rgba(255, 255, 255, 0.12);
+$sombra-frontal: 0 0 .5em rgba(255, 255, 255, 0.12);
+$sombra-input: 10px 10px 30px rgba(0,0,0,0.06);

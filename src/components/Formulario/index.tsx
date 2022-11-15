@@ -1,5 +1,5 @@
 //Importação dso estilos
-import style from './formulario.module.scss'
+import style from './Formulario.module.scss'
 
 //Importação do Hook useState
 import { useState } from 'react'
@@ -21,7 +21,7 @@ interface Props {
     setLinhas: React.Dispatch<React.SetStateAction<ILinha[]>>
 }
 
-//Cria e exporta o componente formulário, indicando que os tipos estão definidos na interface Props
+//Cria e exporta o componente da linha, indicando que suas props estão tipadas na interface Props
 export default function Formulario({ selecionarTreino, setLinhas }: Props) {
 
     //Cria as variáveis que irão armazenar o valor de cada elemento para serem usadas em outros componenets, estado inicial vazio
@@ -48,7 +48,7 @@ export default function Formulario({ selecionarTreino, setLinhas }: Props) {
                     series,
                     cargas,
                     tempo,
-                    id: uuidv4()
+                    id: uuidv4() //Cria um id aleátorio para cada linha
                 }
             ]
             )
@@ -62,7 +62,7 @@ export default function Formulario({ selecionarTreino, setLinhas }: Props) {
     }
 
     return (
-        <section className={style.container}>
+        <section className={style.formulario}>
             <form onSubmit={aoSalvar}>
                 <h2>Monte seu Treino React</h2>
                 <ListaSuspensa

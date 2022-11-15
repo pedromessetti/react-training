@@ -14,15 +14,19 @@ import { tempoParaSegundos } from "common/utils/time"
 import { BsFillPlayFill } from 'react-icons/bs'
 
 
+//Cria e exporta o componente do cronometro, indicando que suas props estão tipadas na interface ILinha
 export default function Cronometro({ series, tempo }: ILinha) {
 
+    //Cria a variável cronômetro com o valor inicial da prop tempo convertidos em segundos
     const [cronometro, setCronometro] = useState(tempoParaSegundos(String(tempo)))
+    //Cria a variável repetir com o valor inicial da prop series convertida para um tipo number
     const [repetir, setRepetir] = useState(Number(series))
 
+    //Variável que define os minutos através de operações matemáticas
     const minutos = Math.floor(cronometro / 60)
     const minutoDezena = Math.floor(minutos / 10)
     const minutoUnidade = minutos % 10
-
+    //Variável que define os segundos através de operações matemáticas
     const segundos = cronometro % 60
     const segundoDezena = Math.floor(segundos / 10)
     const segundoUnidade = segundos % 10
@@ -43,6 +47,7 @@ export default function Cronometro({ series, tempo }: ILinha) {
     }
 
     return (
+        //Retorno conforme o operador ternário, se o cronômetro tiver de se repetir, retorna-se o cronômetro, se não ele retorna uma div indicando para o usuário que o exercício foi finalizado
         (repetir > 0) ?
         <div className={style.cronometro}>
                 <span>{minutoDezena}</span>
@@ -53,12 +58,12 @@ export default function Cronometro({ series, tempo }: ILinha) {
                 
                 <BsFillPlayFill 
                     className={style.cronometro__icone}
-                    onClick={() => regressiva(cronometro)}/>
+                    onClick={() => regressiva(cronometro)} //Ao clicar no ícone de play a função regressiva será chamada e terá como parâmetro o tempo do cronômetro
+                />
         </div>
         :
         <div>
             Exercício Finalizado
-
         </div>
     )
 }

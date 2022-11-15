@@ -1,19 +1,20 @@
-@import 'styles/breakpoints.scss';
+@import 'styles/breakpoints';
+@import 'styles/variaveis';
 
 .card {
     width: 90%;
     margin: 1em auto;
-    background-color: #4c6793cc;
+    background-color: $azul-principal;
     border-radius: 20px;
     padding: .5em 0 .5em 1em;
     text-align: center;
-    box-shadow: .3em .3em .8em rgba(255, 255, 255, 0.12);
+    box-shadow: $sombra;
 
     @media (max-width:$mobile) {
         padding: .5em 1em;
     }
-    
-     h2 {
+
+    h2 {
         display: inline-block;
         margin: .5em 0;
         border-bottom: 2px solid rgb(200, 209, 253);

@@ -1,8 +1,10 @@
+@import 'styles/variaveis';
+
 select {
     font-size: 1em;
-    color: #61dafb;
-    background-color: #556c91;
-    box-shadow: 10px 10px 30px rgba(0,0,0,0.06);
+    color: $azul-fonte;
+    background-color: $azul-input;
+    box-shadow: $sombra-input;
     width: 100%;
     border: none;
     border-radius: 10px;

@@ -11,7 +11,7 @@ import { ILinha } from 'types/ILinha'
 import { BsFillTrashFill } from 'react-icons/bs'
 
 
-//Cria e exporta o componente da linha indicando que suas props estão tipadas na interface ILinha
+//Cria e exporta o componente da linha, indicando que suas props estão tipadas na interface ILinha
 export default function Linha({ exercicio, series, repeticoes, cargas, tempo, id }: ILinha) {
 
   function removeLinha() {
@@ -19,21 +19,21 @@ export default function Linha({ exercicio, series, repeticoes, cargas, tempo, id
   }
 
   return (
-    <div 
-      className={style.exercicio} 
+    <div
+      className={style.exercicio}
       key={id}
     >
-        <BsFillTrashFill 
-          onClick={() => removeLinha()}
-          className={style.exercicio__icone}
-        />
-        <p>{exercicio}</p>
-        <p>{series} x {repeticoes}</p>
-        <p>{cargas}</p>
-        <Cronometro
-          series={series}
-          tempo={tempo}
-        />
+      <BsFillTrashFill
+        onClick={() => removeLinha()}
+        className={style.exercicio__icone}
+      />
+      <p>{exercicio}</p>
+      <p>{series} x {repeticoes}</p>
+      <p>{cargas}</p>
+      <Cronometro
+        series={series}
+        tempo={tempo}
+      />
     </div>
   )
 }

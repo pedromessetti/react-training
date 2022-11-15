@@ -1,0 +1,25 @@
+@import 'styles/breakpoints';
+@import 'styles/variaveis';
+
+.formulario {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3em;
+
+    form {
+        max-width: 60%;
+        padding: 1.5em;
+        background-color: $azul-principal;
+        border-radius: 1.5em;
+        box-shadow: $sombra;
+        
+        @media (max-width: $mobile) {
+            padding: 1em;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: .8em;
+        }
+    }
+}

@@ -1,4 +1,5 @@
 @import 'styles/breakpoints';
+@import 'styles/variaveis';
 
 .campoTexto {
     margin: .8em 0;
@@ -20,9 +21,9 @@
     }
 
     .input {
-        background-color: #556c91;
-        color: #61dafb;
-        box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+        background-color: $azul-input;
+        color: $azul-fonte;
+        box-shadow: $sombra-input;
         border: none;
         border-radius: 10px;
         font-size: 1em;
@@ -40,7 +41,7 @@
     
     .input::placeholder {
         background-color: transparent;
-        color: #61dafba2;
+        color: $placeholder;
     }
     
 }

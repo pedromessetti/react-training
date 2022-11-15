@@ -1,7 +1,7 @@
 export interface inputPadrao {
     label?: string,
-    name: string,
-    type: "text" | "time" | "number",
+    name?: string,
+    type?: "text" | "time" | "number",
     placeholder?: string,
     required: boolean,
     value: string | number | undefined,
