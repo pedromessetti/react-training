@@ -12,6 +12,7 @@ import { tempoParaSegundos } from "common/utils/time"
 
 //Importação do ícone de Play do pacote React Icons
 import { BsFillPlayFill } from 'react-icons/bs'
+import classNames from 'classnames'
 
 
 //Cria e exporta o componente do cronometro, indicando que suas props estão tipadas na interface ILinha
@@ -21,6 +22,7 @@ export default function Cronometro({ series, tempo }: ILinha) {
     const [cronometro, setCronometro] = useState(tempoParaSegundos(String(tempo)))
     //Cria a variável repetir com o valor inicial da prop series convertida para um tipo number
     const [repetir, setRepetir] = useState(Number(series))
+    const [playAtivo, setPlayAtivo] = useState(false)
 
     //Variável que define os minutos através de operações matemáticas
     const minutos = Math.floor(cronometro / 60)
@@ -33,12 +35,14 @@ export default function Cronometro({ series, tempo }: ILinha) {
 
     //Função que faz a regressão do cronômetro
     function regressiva(cronometro: number = 0) { //Define que o parâmetro cronometro será do tipo number
+        setPlayAtivo(true)
         if (repetir > 0) {
             setTimeout(() => { //Método que faz a regressão do cronometro
                 if (cronometro > 0) { //Se o cronometro for maior que 0
                     setCronometro(cronometro - 1) //Variável cronometro terá o valor do cronometro menos 1
                     return regressiva(cronometro - 1) //Retorna a própria função com o valor do cronometro menos 1 para ser executada novamente até que o contador seja zerado
                 }
+                setPlayAtivo(false)
                 setRepetir(Number(repetir) - 1)
                 setCronometro(tempoParaSegundos(String(tempo)))
                 window.alert("Descanso finalizado. Hora de voltar a treinar!!")
@@ -57,7 +61,10 @@ export default function Cronometro({ series, tempo }: ILinha) {
                 <span>{segundoUnidade}</span>
                 
                 <BsFillPlayFill 
-                    className={style.cronometro__icone}
+                    className={classNames({
+                        [style.cronometro__icone]:true,
+                        [style.cronometro__icone__ativo]: playAtivo
+                    })}
                     onClick={() => regressiva(cronometro)} //Ao clicar no ícone de play a função regressiva será chamada e terá como parâmetro o tempo do cronômetro
                 />
         </div>

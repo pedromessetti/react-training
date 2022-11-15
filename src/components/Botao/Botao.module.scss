@@ -9,12 +9,13 @@
   border: none;
   cursor: pointer;
   color: $branco;
-  transition: 500ms;
+  transition: 300ms;
   font-size: 1em;
   font-family: $fonte;
 
   &:hover {
-    color: $botao-hover;
+    color: $botao;
+    background-color: $branco;
   }
 
   @media (max-width:$mobile) {

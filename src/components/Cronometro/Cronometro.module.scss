@@ -1,3 +1,5 @@
+@import 'styles/variaveis';
+
 .cronometro {
     display: flex;
     justify-content: center;
@@ -6,5 +8,15 @@
         font-size: 1.2em;
         cursor: pointer;
         margin-left: 10px;
+        color: $azul-icone;
+        transition: 300ms;
+
+        &:hover {
+            color: $azul-fonte;
+        }
+
+        &__ativo {
+            color: $branco;
+        }
     }
 }
