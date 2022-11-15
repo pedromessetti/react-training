@@ -51,7 +51,9 @@ export default function Cronometro({ series, tempo }: ILinha) {
                 <span>{segundoDezena}</span>
                 <span>{segundoUnidade}</span>
                 
-                <BsFillPlayFill onClick={() => regressiva(cronometro)}/>
+                <BsFillPlayFill 
+                    className={style.cronometro__icone}
+                    onClick={() => regressiva(cronometro)}/>
         </div>
         :
         <div>

@@ -12,6 +12,8 @@ import Botao from '../Botao'
 import CampoTexto from '../CampoTexto'
 import ListaSuspensa from '../ListaSuspensa'
 
+//Importação do id aleatório da linha do exercício
+import { v4 as uuidv4 } from 'uuid'
 
 //Interface para tipar as props recebidas
 interface Props {
@@ -45,11 +47,12 @@ export default function Formulario({ selecionarTreino, setLinhas }: Props) {
                     repeticoes,
                     series,
                     cargas,
-                    tempo
+                    tempo,
+                    id: uuidv4()
                 }
             ]
-        )
-        //Após criar a linha retornamos para os valores iniciais das variáveis
+            )
+            //Após criar a linha retornamos para os valores iniciais das variáveis
         setTreino('')
         setExercicio('')
         setRepeticoes('')

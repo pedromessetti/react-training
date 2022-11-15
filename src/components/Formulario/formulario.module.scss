@@ -1,3 +1,5 @@
+@import 'styles/breakpoints';
+
 .container {
     display: flex;
     justify-content: center;
@@ -16,7 +18,7 @@
         margin-bottom: .8em;
     }
 
-    @media screen and (max-width: 920px) {
+    @media (max-width: $mobile) {
         form {
             padding: 1em;
         }

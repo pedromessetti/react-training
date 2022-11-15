@@ -1,3 +1,5 @@
+@import 'styles/breakpoints';
+
 .botao {
   background-color: #6278f7;
   border-radius: .75em;
@@ -14,7 +16,7 @@
     color: #95ffd4;
   }
 
-  @media screen and (max-width:920px) {
+  @media (max-width:$mobile) {
     .botao {
       font-size: .7em;
     }
