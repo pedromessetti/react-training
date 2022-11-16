@@ -53,6 +53,8 @@ Com isso terá terminado a instalação e poderá usar o CSS Modules.
 Para utiliza-lo, ao criar arquivos de Sass, crie-os com a extensão `app.modules.scss`. Será importado no `index.tsx`como um objeto. Portanto no topo do código teremos `import style from './app.module.scss'`. O `className` passará a ser uma variável JavaScript `style.app`
 * ### Padronização do CSS com BEN
 Por utilizar CSS Modules, para gerar classes únicas para cada componente, temos uma maior facilidade em nomea-las, por isso optamos por um estilo simples de nomeação de classes dentro de cada tag. 
+* ### LocalStorage
+
 
 # Autor
 | [<img src="https://github.com/pedromessetti.png" width=115><br><sub>Pedro Vinicius Messetti</sub>](https://github.com/pedromessetti) |

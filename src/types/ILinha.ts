@@ -4,6 +4,6 @@ export interface ILinha {
     series?: string | number,
     repeticoes?: string,
     cargas?: string,
-    tempo: number | string,
-    id?: string
+    tempo?: number | string,
+    id: string,
 }

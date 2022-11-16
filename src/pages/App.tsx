@@ -36,8 +36,8 @@ export default function App() {
             <Card 
               key={treino.nome}
               nomeDoTreino={treino.nome}
-              linhas={linhas.filter(
-                linhas => linhas.treino === treino.nome //Filtra as linhas pelo nome do treino
+              linhas={linhas.filter(linhas => 
+                linhas.treino === treino.nome //Filtra as linhas pelo nome do treino
               )}
             />
           )}

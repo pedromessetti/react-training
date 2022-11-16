@@ -39,7 +39,7 @@ export default function Formulario({ selecionarTreino, setLinhas }: Props) {
 
         //Seta a linha como um array onde o primeiro elemento é um espalhamento da própria linha e o segundo elemento é um objeto contendo as variáveis do treino com seus valores definidos pelo usuário
         setLinhas((linha) =>
-            [
+        [
                 ...linha,
                 {
                     treino,
@@ -51,8 +51,8 @@ export default function Formulario({ selecionarTreino, setLinhas }: Props) {
                     id: uuidv4() //Cria um id aleátorio para cada linha
                 }
             ]
-            )
-            //Após criar a linha retornamos para os valores iniciais das variáveis
+        )
+        //Após criar a linha retornamos para os valores iniciais das variáveis
         setTreino('')
         setExercicio('')
         setRepeticoes('')

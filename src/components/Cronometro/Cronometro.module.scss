@@ -15,15 +15,8 @@
             color: $azul-fonte;
         }
 
-        &__ativo {
+        &--ativo {
             color: $branco;
         }
     }
-}
-
-.finalizado {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    color: $concluido;
 }

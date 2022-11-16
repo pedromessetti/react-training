@@ -1,6 +1,6 @@
 @import 'styles/variaveis.scss';
 
-.exercicio {
+.linha {
     display: grid;
     grid-template-columns: .2fr 1fr 1fr 1fr 1fr;
     align-items: center;
@@ -9,14 +9,34 @@
         margin: .5em;
     }
 
-    &__icone {
+    &__trash {
         cursor: pointer;
         color: $azul-icone;
         transition: 300ms;
-        
+        margin-left: auto;
+
         &:hover {
             color: $remover;
             box-shadow: $sombra-frontal;
         }
+
+    }
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+            margin-left: 5px;
+        }
+    }
+
+    &--concluida {
+        color: $concluido;
+        background-color: #00480d2e;
+        border-radius: 10px;
     }
 }
+
+  
